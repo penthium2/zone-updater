@@ -38,7 +38,7 @@ done
 /usr/sbin/rndc freeze ${zone}
 /usr/sbin/rndc sync -clean ${zone}
 sed -i -E '/SOA/ N;s/(\n[^0-9]+)[0-9]+/\1'"$(grep -A 1 'SOA' ${DIRECTORY}/${zone_file} | awk  '/^\t/ {print $1+1}')"'/' ${DIRECTORY}/${zone_file}
-vi ${DIRECTORY}/${zone_file}
+su $(logname) -c "vi ${DIRECTORY}/${zone_file}"
 if /usr/sbin/named-checkzone ${zone} ${DIRECTORY}/${zone_file} ; then
 	/usr/sbin/rndc reload ${zone}
 	/usr/sbin/rndc thaw ${zone}
