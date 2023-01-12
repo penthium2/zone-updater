@@ -9,7 +9,7 @@ injects and removes the jnl of dynamic updates
 
 auto increment the serial number of the zone
 
-launch vi to modify the zone
+launch vi to modify the zone in secure mode ( user login launch vi )
 
 check the zone
 
