@@ -1,18 +1,18 @@
 # zone-updater
-éditeur de fichier zone DNS même dynamique
+DNS zone file editor even dynamic
 
-ce petit script fait :
+this little script does :
 
-freeze la zone
+freeze the zone
 
-injecte et supprime le jnl des mise à jour dynamique
+injects and removes the jnl of dynamic updates
 
-auto incrémente le serial number de la zone
+auto increment the serial number of the zone
 
-lance vi pour modifier la zone
+launch vi to modify the zone
 
-vérifie la zone
+check the zone
 
-libère la zone pour les futur mise à jours dynamiques.
+releases the zone for future dynamic updates.
     
 usage : ```zone-updater.sh -z ZONE -f ZONE_FILE```
